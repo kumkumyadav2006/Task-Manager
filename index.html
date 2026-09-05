@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <h1>TaskFlow ✨</h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+
+            <button id="darkModeBtn" type="button">🌙</button>
+        </header>
+
+
+        <section class="task-box">
+
+            <h2>Add a New Task</h2>
+
+            <form id="taskForm">
+
+                <label for="taskInput">Task</label>
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                    required
+                >
+
+                <div class="options">
+
+                    <div>
+                        <label for="categoryInput">Category</label>
+                        <select id="categoryInput">
+                            <option value="Study">📚 Study</option>
+                            <option value="Work">💼 Work</option>
+                            <option value="Personal">🏠 Personal</option>
+                            <option value="Other">✨ Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="priorityInput">Priority</label>
+                        <select id="priorityInput">
+                            <option value="Low">🟢 Low</option>
+                            <option value="Medium">🟡 Medium</option>
+                            <option value="High">🔴 High</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="dateInput">Date</label>
+                        <input type="date" id="dateInput">
+                    </div>
+
+                </div>
+
+                <button type="submit" id="addBtn">+ Add Task</button>
+
+            </form>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat">
+                <span>📋</span>
+                <div>
+                    <p>Total</p>
+                    <h3 id="totalTasks">0</h3>
+                </div>
+            </div>
+
+            <div class="stat">
+                <span>⏳</span>
+                <div>
+                    <p>Pending</p>
+                    <h3 id="pendingTasks">0</h3>
+                </div>
+            </div>
+
+            <div class="stat">
+                <span>✅</span>
+                <div>
+                    <p>Completed</p>
+                    <h3 id="completedTasks">0</h3>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="tools">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+            >
+
+            <select id="filterInput">
+                <option value="all">All Tasks</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="high">High Priority</option>
+                <option value="study">📚 Study</option>
+                <option value="work">💼 Work</option>
+                <option value="personal">🏠 Personal</option>
+            </select>
+
+        </section>
+
+
+        <ul id="taskList"></ul>
+
+
+        <div id="emptyMessage" class="empty">
+            <div>📝</div>
+            <h3>No tasks yet</h3>
+            <p>Add your first task above!</p>
+        </div>
+
+
+        <footer>
+            <p>Made with HTML • CSS • JavaScript ❤️</p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
